@@ -1,0 +1,110 @@
+/* Overall body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #80e9e4, #fc9ab9);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Calculator container styling */
+.calculator {
+    width: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+}
+
+/* Display area styling */
+#display {
+    width: 90%;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: right;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+/* Buttons container with grid layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px; /* Adds spacing between buttons */
+}
+
+/* Styling individual buttons */
+button {
+    padding: 20px;
+    font-size: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* Operations button styling */
+.operations {
+    background: #f39c12;
+    color: #fff;
+}
+
+.operations:hover {
+    background: rgb(205, 202, 50);
+    color: #000;
+}
+
+/* Delete button styling */
+.del {
+    background: rgb(155, 33, 33);
+    color: wheat;
+}
+
+.del:hover {
+    background: rgb(255, 0, 0);
+    color: rgb(212, 177, 177);
+}
+
+/* Equals button styling (spans two rows) */
+.equals {
+    grid-row: span 2;
+    background: #27ae60;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.equals:hover {
+    background: #09ee68;
+    color: #ffffff;
+}
+
+/* Zero button spans two columns */
+button.zero {
+    grid-column: span 2;
+}
+
+/* General button hover and active effects */
+button:hover {
+    background: #272424;
+    color: #fff;
+}
+
+button:active {
+    background: #dfe4ea;
+}
